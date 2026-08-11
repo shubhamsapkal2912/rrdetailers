@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RR Detailers - Premium Automotive Care</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2220%22 font-size=%2220%22>🚗</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- PrimeIcons (used by the original Angular app) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeicons@6/primeicons.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand" data-scroll="home">
+          <i class="pi pi-car brand-icon"></i>
+          <h2 class="brand-title">RR Detailers</h2>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="navbar-menu desktop-menu">
+          <a class="menu-item" data-scroll="home">Home</a>
+          <a class="menu-item" data-scroll="services">Services</a>
+          <a class="menu-item" data-scroll="testimonials">Testimonials</a>
+          <a class="menu-item" data-scroll="contact">Contact</a>
+          <a class="menu-item" data-scroll="location">Location</a>
+          <div class="book-btn">
+            <button class="p-button" id="bookNowBtn">
+              <i class="pi pi-calendar"></i><span>Book Now</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">
+          <i class="pi pi-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Side Menu -->
+      <div class="mobile-side-menu" id="mobileSideMenu">
+        <div class="side-menu-overlay" id="sideMenuOverlay"></div>
+        <div class="side-menu-panel">
+          <div class="side-menu-header">
+            <div class="side-menu-brand">
+              <i class="pi pi-car"></i>
+              <h3>RR Detailers</h3>
+            </div>
+            <button class="close-btn" id="closeMobileMenu" aria-label="Close menu">
+              <i class="pi pi-times"></i>
+            </button>
+          </div>
+
+          <nav class="side-menu-nav">
+            <a class="side-menu-item" data-scroll="home"><i class="pi pi-home"></i>Home</a>
+            <a class="side-menu-item" data-scroll="services"><i class="pi pi-th-large"></i>Services</a>
+            <a class="side-menu-item" data-scroll="testimonials"><i class="pi pi-star"></i>Testimonials</a>
+            <a class="side-menu-item" data-scroll="contact"><i class="pi pi-envelope"></i>Contact</a>
+            <a class="side-menu-item" data-scroll="location"><i class="pi pi-map-marker"></i>Location</a>
+          </nav>
+
+          <div class="side-menu-footer">
+            <div class="book-btn-mobile">
+              <button class="p-button" id="bookNowBtnMobile">
+                <i class="pi pi-calendar"></i><span>Book Now</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <div class="home-page">
+
+        <!-- ===================== SERVICES ===================== -->
+        <section id="services" class="section">
+          <div class="services-page">
+            <div class="services-container">
+              <div class="services-header">
+                <div class="header-badge">
+                  <span class="badge-line desktop-only"></span>
+                  Premium Care
+                </div>
+                <h1 class="header-title">
+                  Precision Detailing <span class="highlight">Services</span>
+                </h1>
+                <p class="header-description">
+                  From daily washes to showroom-grade protection, we treat every vehicle like a masterpiece.
+                  Experience the ultimate care for your machine.
+                </p>
+                <div class="header-actions">
+                  <div class="primary-btn">
+                    <button class="p-button" data-scroll="contact">
+                      <i class="pi pi-th-large"></i><span>View All Packages</span>
+                    </button>
+                  </div>
+                  <div class="secondary-btn">
+                    <button class="p-button" data-scroll="contact">
+                      <i class="pi pi-phone"></i><span>Contact Us</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slideshow -->
+              <div class="slideshow-container" id="slideshowContainer">
+                <div class="slides-wrapper" id="slidesWrapper"></div>
+                <div class="slide-indicators" id="slideIndicators"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== TESTIMONIALS ===================== -->
+        <section id="testimonials" class="section">
+          <div class="testimonials-page">
+            <div class="hero-section">
+              <div class="hero-overlay"></div>
+              <div class="hero-content">
+                <div class="hero-badge">
+                  <i class="pi pi-verified"></i>
+                  Verified Reviews
+                </div>
+                <h1 class="hero-title">
+                  Driven by <span class="highlight">Satisfaction</span>
+                </h1>
+                <p class="hero-description">
+                  Join hundreds of premium car owners who trust RR Detailers with their prized possessions.
+                  Excellence isn't just a goal, it's our standard.
+                </p>
+              </div>
+            </div>
+
+            <!-- Rating Summary -->
+            <section class="rating-summary">
+              <div class="rating-container">
+                <div class="rating-card">
+                  <div class="rating-decor"></div>
+
+                  <div class="rating-overview">
+                    <h2>Overall Rating</h2>
+                    <div class="rating-display">
+                      <span class="rating-number">4.9</span>
+                      <div class="rating-details">
+                        <div class="stars-static" aria-label="4.9 out of 5 stars">
+                          <i class="pi pi-star-fill"></i><i class="pi pi-star-fill"></i><i class="pi pi-star-fill"></i><i class="pi pi-star-fill"></i><i class="pi pi-star-fill"></i>
+                        </div>
+                        <p class="rating-count">Based on 128 verified reviews</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="rating-breakdown" id="ratingBreakdown"></div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Testimonials Grid -->
+            <section class="testimonials-section">
+              <div class="testimonials-container">
+                <div class="section-header">
+                  <div>
+                    <p class="section-badge">Latest Feedback</p>
+                    <h2 class="section-title">What Our Clients Say</h2>
+                  </div>
+                </div>
+
+                <div class="testimonials-grid" id="testimonialsGrid"></div>
+              </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="cta-section">
+              <div class="cta-content">
+                <div class="cta-icon">
+                  <i class="pi pi-star"></i>
+                </div>
+                <h2 class="cta-title">Experience the Difference</h2>
+                <p class="cta-description">
+                  Your vehicle deserves the best care. Book your appointment today and see why we are rated #1 in detailing.
+                </p>
+                <div class="cta-actions">
+                  <div class="primary-btn">
+                    <button class="p-button" data-scroll="contact">
+                      <i class="pi pi-calendar"></i><span>Book Your Detail</span>
+                    </button>
+                  </div>
+                  <div class="secondary-btn">
+                    <button class="p-button" data-scroll="services">
+                      <i class="pi pi-images"></i><span>View Our Gallery</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="cta-features">
+                  <div class="feature-item">
+                    <i class="pi pi-shield"></i>
+                    <span>Fully Insured</span>
+                  </div>
+                  <div class="feature-divider"></div>
+                  <div class="feature-item">
+                    <i class="pi pi-star-fill"></i>
+                    <span>Certified Pros</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ===================== CONTACT ===================== -->
+        <section id="contact" class="section">
+          <div class="contact-page">
+            <div class="contact-container">
+              <!-- Info -->
+              <div class="contact-info">
+                <div class="info-header">
+                  <span class="info-badge">Get in Touch</span>
+                  <h1 class="info-title">
+                    Ready for a <span class="highlight">Showroom</span> Finish?
+                  </h1>
+                  <p class="info-description">
+                    Contact RR Detailers today for a custom quote. We specialize in bringing your vehicle
+                    back to life with precision and care. Trusted by over 500+ luxury car owners.
+                  </p>
+                </div>
+
+                <div class="contact-cards" id="contactCards"></div>
+              </div>
+
+              <!-- Form -->
+              <div class="contact-form-wrapper">
+                <div class="p-card">
+                  <div class="p-card-header">
+                    <h3 class="form-title">Send an Inquiry</h3>
+                  </div>
+                  <div class="p-card-body">
+                    <form id="contactForm" class="contact-form" novalidate>
+                      <div class="form-row">
+                        <div class="form-field">
+                          <label for="name" class="form-label">Name *</label>
+                          <input id="name" name="name" type="text" placeholder="Your Name" />
+                          <small class="error-message" data-error-for="name"></small>
+                        </div>
+                        <div class="form-field">
+                          <label for="email" class="form-label">Email *</label>
+                          <input id="email" name="email" type="email" placeholder="your@email.com" />
+                          <small class="error-message" data-error-for="email"></small>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-field">
+                          <label for="phone" class="form-label">Phone *</label>
+                          <input id="phone" name="phone" type="tel" placeholder="9876543210" />
+                          <small class="error-message" data-error-for="phone"></small>
+                        </div>
+                        <div class="form-field">
+                          <label for="service" class="form-label">Service *</label>
+                          <select id="service" name="service">
+                            <option value="" disabled selected>Select Service</option>
+                            <option value="ppf">PPF (Paint Protection Film)</option>
+                            <option value="ceramic-coating">Ceramic Coating</option>
+                            <option value="deep-wash">Deep Wash</option>
+                          </select>
+                          <small class="error-message" data-error-for="service"></small>
+                        </div>
+                      </div>
+
+                      <div class="form-field full-width">
+                        <label for="vehicleType" class="form-label">Vehicle Type *</label>
+                        <select id="vehicleType" name="vehicleType">
+                          <option value="" disabled selected>Select Vehicle Type</option>
+                          <option value="2-wheeler">2 Wheeler</option>
+                          <option value="4-wheeler">4 Wheeler</option>
+                        </select>
+                        <small class="error-message" data-error-for="vehicleType"></small>
+                      </div>
+
+                      <div class="form-field full-width">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your vehicle and what you need..." rows="5"></textarea>
+                        <small class="error-message" data-error-for="message"></small>
+                      </div>
+
+                      <div class="submit-btn-wrapper">
+                        <button type="submit" class="p-button">
+                          <i class="pi pi-send"></i><span>Send Message</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== LOCATION ===================== -->
+        <section id="location" class="section">
+          <div class="location-page">
+            <div class="location-container">
+              <div class="location-header">
+                <h1 class="header-title">Visit Our <span class="highlight">Workshop</span></h1>
+                <p class="header-description">
+                  Located in the heart of the Auto District, our state-of-the-art facility is equipped
+                  with the latest tools and technology to provide premium detailing services.
+                </p>
+              </div>
+
+              <div class="location-content">
+                <!-- Map -->
+                <div class="map-section">
+                  <div class="p-card map-card">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3881252576307!2d73.96154707519145!3d18.511354882580385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c32867484021%3A0x242f7df2f00b1a4a!2sRR%20DETAILERS!5e0!3m2!1sen!2sin!4v1767634791166!5m2!1sen!2sin"
+                      width="100%"
+                      height="450"
+                      style="border:0;"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                  </div>
+                </div>
+
+                <!-- Info -->
+                <div class="info-section">
+                  <div class="p-card hours-card">
+                    <div class="card-header">
+                      <i class="pi pi-clock"></i>
+                      <h3>Business Hours</h3>
+                    </div>
+                    <div class="p-card-content">
+                      <div class="hours-list" id="hoursList"></div>
+                    </div>
+                  </div>
+
+                  <div class="p-card contact-info-card">
+                    <div class="card-header">
+                      <i class="pi pi-phone"></i>
+                      <h3>Contact Information</h3>
+                    </div>
+                    <div class="p-card-content">
+                      <div class="contact-list">
+                        <div class="contact-item">
+                          <i class="pi pi-phone"></i>
+                          <div>
+                            <span class="label">Phone</span>
+                            <a href="tel:+919876543210" class="value">+91 98765 43210</a>
+                          </div>
+                        </div>
+                        <div class="contact-item">
+                          <i class="pi pi-envelope"></i>
+                          <div>
+                            <span class="label">Email</span>
+                            <a href="mailto:support@rrdetailers.com" class="value">support&#64;rrdetailers.com</a>
+                          </div>
+                        </div>
+                        <div class="contact-item">
+                          <i class="pi pi-globe"></i>
+                          <div>
+                            <span class="label">Website</span>
+                            <a href="#" class="value">www.rrdetailers.com</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="features-grid">
+                    <div class="feature-item">
+                      <i class="pi pi-shield"></i>
+                      <span>Insured Services</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="pi pi-users"></i>
+                      <span>Expert Team</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="pi pi-car"></i>
+                      <span>Premium Tools</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="pi pi-star-fill"></i>
+                      <span>Top Rated</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h2 class="brand-title">RR Detailers</h2>
+            <p class="brand-subtitle">Premium Automotive Care Center</p>
+          </div>
+
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" class="social-link"><i class="pi pi-instagram"></i></a>
+            <a href="#" aria-label="Facebook" class="social-link"><i class="pi pi-facebook"></i></a>
+            <a href="#" aria-label="YouTube" class="social-link"><i class="pi pi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="copyright">© <span id="currentYear"></span> RR Detailers. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms of Service</a>
+            <a href="#" class="footer-link">Support</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
